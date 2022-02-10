@@ -10,10 +10,10 @@ The project's objective is to use Terraform's IaC (Infrastructure as Code) solut
   - Your AWS credentials (AWS Access Key ID & AWS Secret Access Key) + being successfully authenticated in AWS CLI, using ```aws configure```
   - An IAM role with the ```AWSGlueServiceRole``` policy plus an inline policy for read/write access to S3
   - The IAM role ARN must be saved in the ```variables.tf``` file, variable ```iam_role```
-  - Using the terminal, ```cd``` in the folder where you saved the repo files (```stations.json```, ```trips.json```, ```glue-spark-job.py```, ```main.tf```, ```variables.tf```)
 <br />
   
 ## To start the Terraform configuration run the following commands:
+  - Using the terminal, ```cd``` in the folder where you saved the repo files (```stations.json```, ```trips.json```, ```glue-spark-job.py```, ```main.tf```, ```variables.tf```)
   - ```terraform init```
   - ```terraform fmt``` (optional - used for formatting the configuration file)
   - ```terraform validate``` (optional - used for validating the configuration fie)
