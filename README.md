@@ -1,7 +1,6 @@
-# AWS-Terraform-PySpark_ETL-Job
-
-#### This project's objective is to use Terraform's IaC (Infrastructure as Code) solution for creating several AWS services for an ETL job. The ETL job reads two different input JSON files from an S3 bucket, precesses them through PySpark in a Glue Job, then outputs a third JSON file in S3 as result.
- <br />
+## Objective:
+The project's objective is to use Terraform's IaC (Infrastructure as Code) solution for creating several AWS services for an ETL job. The ETL job reads two different input JSON files from an S3 bucket, precesses them through PySpark in a Glue Job, then outputs a third JSON file in S3 as result.
+<br /><br />
  
  ## Prerequisites:
  To succesfully run the Terraform configuration and create the AWS resources you will need:
