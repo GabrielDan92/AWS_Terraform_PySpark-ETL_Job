@@ -8,9 +8,12 @@ The project's objective is to use Terraform's IaC (Infrastructure as Code) solut
   - The AWS CLI installed - install instructions [here](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
   - An AWS account
   - Your AWS credentials (AWS Access Key ID & AWS Secret Access Key) + being successfully authenticated in AWS CLI, using ```aws configure```
+  - An IAM role with the ```AWSGlueServiceRole``` policy plus an inline policy for read/write access to S3
+  - The IAM role ARN must be saved in the ```variables.tf``` file, variable ```iam_role```
+  - Using the terminal, ```cd``` in the folder where you saved the repo files (```stations.json```, ```trips.json```, ```glu-spark-job.py```, ```main.tf```, ```variables.tf```)
 <br />
   
-## To start the Terraform configuration run the following commands after cd-ing in the folder where the repo files are saved:
+## To start the Terraform configuration run the following commands:
   - ```terraform init```
   - ```terraform fmt``` (optional - used for formatting the configuration file)
   - ```terraform validate``` (optional - used for validating the configuration fie)
