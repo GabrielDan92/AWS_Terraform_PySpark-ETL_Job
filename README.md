@@ -1,5 +1,5 @@
 ## Objective:
-The project's objective is to use Terraform's IaC (Infrastructure as Code) solution for creating several AWS services for an ETL job. The ETL job reads two different input JSON files from an S3 bucket, precesses them through PySpark in a Glue Job, then outputs a third JSON file in S3 as result.
+The project's objective is to use Terraform's IaC (Infrastructure as Code) solution for creating several AWS services for an ETL job. The ETL job reads two different input JSON files from an S3 bucket, processes them through PySpark in a Glue Job, then outputs a third JSON file in S3 as result.
 <br /><br />
  
  ## Prerequisites:
@@ -7,7 +7,7 @@ The project's objective is to use Terraform's IaC (Infrastructure as Code) solut
   - The Terraform CLI installed - install instructions [here](https://learn.hashicorp.com/tutorials/terraform/install-cli?in=terraform/aws-get-started)
   - The AWS CLI installed - install instructions [here](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
   - An AWS account
-  - Your AWS credentials (AWS Access Key ID & AWS Secret Access Key) + being succesfully authenticated in AWS CLI, using ```aws configure```
+  - Your AWS credentials (AWS Access Key ID & AWS Secret Access Key) + being successfully authenticated in AWS CLI, using ```aws configure```
 <br />
   
 ## To start the Terraform configuration run the following commands:
@@ -67,7 +67,7 @@ The entire logic of the Glue Job is based on the ```.py``` PySpark script. Using
         }
 }
 ```
-And after calculating the trip times of each trip and replacing the bus_stations_ids with their name, I'm outputing the following ```JSON``` file in S3 as response:
+And after calculating the trip times of each trip in column ```duration_min``` and replacing the ```bus_stations_ids``` column with stations' names, I'm outputing the following ```JSON``` file in S3 as response:
 
 ##### PySpark JSON result:
 ```javascript
