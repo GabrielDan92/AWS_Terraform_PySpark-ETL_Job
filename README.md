@@ -10,7 +10,7 @@ The project's objective is to use Terraform's IaC (Infrastructure as Code) solut
   - Your AWS credentials (AWS Access Key ID & AWS Secret Access Key) + being successfully authenticated in AWS CLI, using ```aws configure```
 <br />
   
-## To start the Terraform configuration run the following commands:
+## To start the Terraform configuration run the following commands after cd-ing in the folder where the repo files are saved:
   - ```terraform init```
   - ```terraform fmt``` (optional - used for formatting the configuration file)
   - ```terraform validate``` (optional - used for validating the configuration fie)
@@ -20,7 +20,7 @@ The project's objective is to use Terraform's IaC (Infrastructure as Code) solut
  
 ## The following steps are applied automatically by Terraform:
   * Create an S3 bucket
-  * Create S3 input/output/script/logs/temp folders - ***I know that Amazon S3 has a flat structure instead of a hierarchy like you would see in a file system, but for the sake of organizational simplicity, the Amazon S3 console supports the folder concept as a means of grouping objects***
+  * Create S3 ```input```, ```output```, ```script```, ```logs``` and ```temp``` folders - ***I know that Amazon S3 has a flat structure instead of a hierarchy like you would see in a file system, but for the sake of organizational simplicity, the Amazon S3 console supports the folder concept as a means of grouping objects***
   * Upload the ```JSON``` input files and the ```.py``` Pyspark script in their corresponding S3 folders
   * Create the AWS Glue Crawler, referencing the input files
   * Start the Glue Crawler
